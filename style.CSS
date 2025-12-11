@@ -592,3 +592,122 @@ body {
         justify-content: center;
     }
 }
+
+/* Projects Button Styles */
+.projects-btn {
+    display: inline-block;
+    margin: 20px 10px;
+    padding: 15px 40px;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white !important;
+    text-decoration: none;
+    border-radius: 30px;
+    font-weight: 600;
+    font-size: 1.1rem;
+    transition: all 0.3s ease;
+    box-shadow: 0 5px 15px rgba(102, 126, 234, 0.3);
+    border: none;
+    cursor: pointer;
+}
+
+.projects-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(102, 126, 234, 0.5);
+    color: white !important;
+}
+
+/* Header buttons container */
+.header-buttons {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 20px;
+}
+
+/* Responsive design for mobile */
+@media (max-width: 768px) {
+    .projects-btn {
+        padding: 12px 30px;
+        font-size: 1rem;
+        margin: 10px 5px;
+    }
+    
+    .header-buttons {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+/* Header buttons container */
+.header-buttons {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 30px;
+}
+
+/* Unified button styles for all header buttons */
+.header-btn,
+.projects-btn {
+    display: inline-block;
+    padding: 15px 40px;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white !important;
+    text-decoration: none;
+    border-radius: 30px;
+    font-weight: 600;
+    font-size: 1.1rem;
+    transition: all 0.3s ease;
+    box-shadow: 0 5px 15px rgba(102, 126, 234, 0.3);
+    border: none;
+    cursor: pointer;
+}
+
+.header-btn:hover,
+.projects-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(102, 126, 234, 0.5);
+    color: white !important;
+}
+
+/* Alternative: Secondary button style (outline version) */
+.header-btn-secondary {
+    display: inline-block;
+    padding: 15px 40px;
+    background: transparent;
+    color: #667eea !important;
+    text-decoration: none;
+    border-radius: 30px;
+    font-weight: 600;
+    font-size: 1.1rem;
+    transition: all 0.3s ease;
+    border: 2px solid #667eea;
+    cursor: pointer;
+}
+
+.header-btn-secondary:hover {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white !important;
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(102, 126, 234, 0.5);
+}
+
+/* Responsive design for mobile */
+@media (max-width: 768px) {
+    .header-btn,
+    .projects-btn,
+    .header-btn-secondary {
+        padding: 12px 30px;
+        font-size: 1rem;
+        width: 100%;
+        max-width: 300px;
+    }
+    
+    .header-buttons {
+        flex-direction: column;
+        align-items: center;
+        gap: 12px;
+    }
+}

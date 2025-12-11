@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projects - Koketso Setatwe</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: #333;
+            line-height: 1.6;
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        header {
+            text-align: center;
+            padding: 40px 20px;
+            color: white;
+        }
+
+        header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+        }
+
+        header p {
+            font-size: 1.2rem;
+            opacity: 0.9;
+        }
+
+        .back-link {
+            display: inline-block;
+            color: white;
+            text-decoration: none;
+            margin-bottom: 20px;
+            padding: 10px 20px;
+            background: rgba(255, 255, 255, 0.2);
+            border-radius: 5px;
+            transition: all 0.3s;
+        }
+
+        .back-link:hover {
+            background: rgba(255, 255, 255, 0.3);
+            transform: translateX(-5px);
+        }
+
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 30px;
+            margin-top: 30px;
+        }
+
+        .project-card {
+            background: white;
+            border-radius: 15px;
+            padding: 30px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .project-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
+        }
+
+        .project-icon {
+            font-size: 3rem;
+            margin-bottom: 15px;
+        }
+
+        .project-card h2 {
+            color: #667eea;
+            margin-bottom: 15px;
+            font-size: 1.8rem;
+        }
+
+        .project-card p {
+            color: #666;
+            margin-bottom: 20px;
+            line-height: 1.8;
+        }
+
+        .tech-stack {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-bottom: 20px;
+        }
+
+        .tech-badge {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 5px 12px;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: 500;
+        }
+
+        .features {
+            margin: 20px 0;
+        }
+
+        .features h3 {
+            color: #333;
+            margin-bottom: 10px;
+            font-size: 1.1rem;
+        }
+
+        .features ul {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        .features li {
+            padding: 8px 0;
+            color: #666;
+            position: relative;
+            padding-left: 25px;
+        }
+
+        .features li:before {
+            content: "▹";
+            position: absolute;
+            left: 0;
+            color: #667eea;
+            font-weight: bold;
+        }
+
+        .project-links {
+            display: flex;
+            gap: 15px;
+            margin-top: 20px;
+        }
+
+        .btn {
+            flex: 1;
+            text-align: center;
+            padding: 12px 20px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s;
+            display: inline-block;
+        }
+
+        .btn-primary {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(102, 126, 234, 0.4);
+        }
+
+        .btn-secondary {
+            background: white;
+            color: #667eea;
+            border: 2px solid #667eea;
+        }
+
+        .btn-secondary:hover {
+            background: #667eea;
+            color: white;
+        }
+
+        .status-badge {
+            display: inline-block;
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            margin-bottom: 15px;
+        }
+
+        .status-complete {
+            background: #d4edda;
+            color: #155724;
+        }
+
+        .status-progress {
+            background: #fff3cd;
+            color: #856404;
+        }
+
+        footer {
+            text-align: center;
+            padding: 40px 20px;
+            color: white;
+            margin-top: 50px;
+        }
+
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 2rem;
+            }
+
+            .projects-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .project-links {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <a href="index.html" class="back-link">← Back to Portfolio</a>
+            <h1>💻 My Projects</h1>
+            <p>Building solutions with Python, APIs, and databases</p>
+        </header>
+
+        <div class="projects-grid">
+            <!-- Project 1: Book Recommendation System -->
+            <div class="project-card">
+                <div class="project-icon">📚</div>
+                <span class="status-badge status-complete">✓ Complete</span>
+                <h2>Book Recommendation System</h2>
+                <p>A Python CLI application that helps users discover, track, and get personalized book recommendations using the Google Books API.</p>
+                
+                <div class="tech-stack">
+                    <span class="tech-badge">Python</span>
+                    <span class="tech-badge">SQLite</span>
+                    <span class="tech-badge">REST API</span>
+                    <span class="tech-badge">Git</span>
+                </div>
+
+                <div class="features">
+                    <h3>Key Features:</h3>
+                    <ul>
+                        <li>Search millions of books via Google Books API</li>
+                        <li>Personal library with custom lists</li>
+                        <li>Smart recommendation engine</li>
+                        <li>Reading statistics dashboard</li>
+                        <li>Export data to CSV</li>
+                    </ul>
+                </div>
+
+                <div class="project-links">
+                    <a href="https://github.com/KoketsoSetatwe/book-recommendation-system" target="_blank" class="btn btn-primary">View on GitHub</a>
+                    <a href="https://github.com/KoketsoSetatwe/book-recommendation-system#readme" target="_blank" class="btn btn-secondary">Documentation</a>
+                </div>
+            </div>
+
+            <!-- Project 2: Medication Reminder App -->
+            <div class="project-card">
+                <div class="project-icon">💊</div>
+                <span class="status-badge status-progress">🔄 In Progress</span>
+                <h2>Medication Reminder App</h2>
+                <p>A Python application designed to help users track medications, set automated reminders, and monitor adherence rates for better health management.</p>
+                
+                <div class="tech-stack">
+                    <span class="tech-badge">Python</span>
+                    <span class="tech-badge">SQLite</span>
+                    <span class="tech-badge">Threading</span>
+                    <span class="tech-badge">Schedule</span>
+                </div>
+
+                <div class="features">
+                    <h3>Key Features:</h3>
+                    <ul>
+                        <li>Automated medication reminders</li>
+                        <li>Medication history tracking</li>
+                        <li>Adherence rate calculations</li>
+                        <li>Multi-schedule support</li>
+                        <li>Notification system</li>
+                    </ul>
+                </div>
+
+                <div class="project-links">
+                    <a href="https://github.com/KoketsoSetatwe/medication-reminder-app" target="_blank" class="btn btn-primary">View on GitHub</a>
+                    <a href="#" class="btn btn-secondary">Coming Soon</a>
+                </div>
+            </div>
+
+            <!-- Project 3: Weather Dashboard (Future) -->
+            <div class="project-card">
+                <div class="project-icon">🌤️</div>
+                <span class="status-badge status-progress">📅 Planned</span>
+                <h2>Weather Dashboard CLI</h2>
+                <p>A command-line weather application that fetches real-time weather data and provides forecasts with beautiful terminal visualizations.</p>
+                
+                <div class="tech-stack">
+                    <span class="tech-badge">Python</span>
+                    <span class="tech-badge">REST API</span>
+                    <span class="tech-badge">JSON</span>
+                    <span class="tech-badge">CLI</span>
+                </div>
+
+                <div class="features">
+                    <h3>Planned Features:</h3>
+                    <ul>
+                        <li>Real-time weather data</li>
+                        <li>5-day forecast</li>
+                        <li>Multiple location support</li>
+                        <li>Temperature unit conversion</li>
+                        <li>Weather alerts</li>
+                    </ul>
+                </div>
+
+                <div class="project-links">
+                    <a href="#" class="btn btn-secondary" style="flex: 1; opacity: 0.6; cursor: not-allowed;">Coming Soon</a>
+                </div>
+            </div>
+
+            <!-- Project 4: Portfolio Website -->
+            <div class="project-card">
+                <div class="project-icon">🌐</div>
+                <span class="status-badge status-complete">✓ Live</span>
+                <h2>Personal Portfolio Website</h2>
+                <p>A responsive portfolio website showcasing my skills, experience, and projects. Built with modern web technologies and deployed on Vercel.</p>
+                
+                <div class="tech-stack">
+                    <span class="tech-badge">HTML5</span>
+                    <span class="tech-badge">CSS3</span>
+                    <span class="tech-badge">JavaScript</span>
+                    <span class="tech-badge">Vercel</span>
+                </div>
+
+                <div class="features">
+                    <h3>Key Features:</h3>
+                    <ul>
+                        <li>Responsive design</li>
+                        <li>Modern UI/UX</li>
+                        <li>Fast loading performance</li>
+                        <li>SEO optimized</li>
+                        <li>Continuous deployment</li>
+                    </ul>
+                </div>
+
+                <div class="project-links">
+                    <a href="https://koketso-personal-portfolio.vercel.app/" target="_blank" class="btn btn-primary">View Live Site</a>
+                    <a href="index.html" class="btn btn-secondary">Go Home</a>
+                </div>
+            </div>
+        </div>
+
+        <footer>
+            <p>© 2025 Koketso Setatwe. Built with passion and Python 🐍</p>
+            <p style="margin-top: 10px;">
+                <a href="mailto:koketsosetatwe@gmail.com" style="color: white; text-decoration: none; margin: 0 10px;">Email</a> | 
+                <a href="https://github.com/KoketsoSetatwe" target="_blank" style="color: white; text-decoration: none; margin: 0 10px;">GitHub</a>
+            </p>
+        </footer>
+    </div>
+</body>
+</html>
