@@ -347,6 +347,39 @@ body {
     color: #cbd5e1;
 }
 
+/* Project Links */
+.project-links {
+    display: flex;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.project-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.5rem 1rem;
+    background: #2d3548;
+    color: #cbd5e1;
+    text-decoration: none;
+    border-radius: 0.5rem;
+    border: 1px solid #334155;
+    font-size: 0.875rem;
+    transition: all 0.3s ease;
+}
+
+.project-link:hover {
+    background: #a855f7;
+    color: white;
+    border-color: #a855f7;
+    transform: translateY(-2px);
+}
+
+.project-link i {
+    width: 16px;
+    height: 16px;
+}
+
 /* Experience */
 .experience-list {
     display: flex;
