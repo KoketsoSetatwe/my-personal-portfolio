@@ -4,8 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Koketso Setatwe - Software Engineer</title>
-    <link rel="stylesheet" href="./style.css">
-    <!-- Lucide Icons CDN -->
+    <link rel="stylesheet" href="style.css">
     <script src="https://unpkg.com/lucide@latest"></script>
 </head>
 <body>
@@ -124,7 +123,10 @@
 
     <!-- Current Focus Section -->
     <section id="focus" class="section projects-section">
-      <div class="project-card">
+        <div class="container">
+            <h2 class="section-title">Current Focus</h2>
+            <div class="projects-grid">
+                <div class="project-card">
                     <div class="project-icon">
                         <i data-lucide="server"></i>
                     </div>
@@ -185,7 +187,7 @@
                         <span class="tech-tag">Data Analysis</span>
                     </div>
                     <div class="project-links">
-                        <a href="http://koketsosetatwe.com/book-recommendation-system/" target="_blank" class="project-link">
+                        <a href="https://github.com/KoketsoSetatwe/book-recommendation-system" target="_blank" class="project-link">
                             <i data-lucide="github"></i>
                             <span>View Code</span>
                         </a>
@@ -204,11 +206,11 @@
                         <span class="tech-tag">JavaScript</span>
                     </div>
                     <div class="project-links">
-                        <a href="koketso-personal-portfolio.vercel.app" target="_blank" class="project-link">
+                        <a href="https://github.com/KoketsoSetatwe/koketso-personal-portfolio" target="_blank" class="project-link">
                             <i data-lucide="github"></i>
                             <span>View Code</span>
                         </a>
-                        <a href="#" class="project-link">
+                        <a href="https://koketso-personal-portfolio.vercel.app/" target="_blank" class="project-link">
                             <i data-lucide="external-link"></i>
                             <span>Live Demo</span>
                         </a>
@@ -334,7 +336,6 @@
 
     <script src="script.js"></script>
     <script>
-        // Initialize Lucide icons
         lucide.createIcons();
     </script>
 </body>
